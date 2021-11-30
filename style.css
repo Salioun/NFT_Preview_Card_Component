@@ -32,19 +32,36 @@ body{
     width:30rem;
     height:50rem;
     border-radius : 3%;
-
 }
 
 .card-img{
     width: 26rem;
     height: 26rem;
+    position: relative;
+    cursor: pointer;
 }
 
 .card-img img{
     width:100%;
     height:100%;
     border-radius: 3%;
+
 }
+
+.card-img .hover-image{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 247, .7) url("images/icon-view.svg") no-repeat center;
+    opacity: 0;
+    z-index : 10;
+    transition : opacity 0.3s;
+    position : absolute;
+}
+
+.card-img:hover .hover-image{
+    opacity: .7;
+}
+
 
 .text-info{
     padding:2.5rem 2.5rem 1rem 2.5rem;
@@ -53,6 +70,11 @@ body{
 .name{
     color: #fff;
     font-size : 1.9rem;
+}
+
+.name:hover{
+    color : hsl(178, 100%, 50%);
+    cursor: pointer;
 }
 
 .description {
@@ -124,4 +146,19 @@ body{
 .user-text a {
     text-decoration:none;
     color: lightgray;
+}
+
+.user-text a:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+@media(max-width: 375px){
+    .attribution{
+        display:none;
+    }
+
+    .card-wrapper{
+        padding: 6rem 0;
+        margin : auto;
+    }
 }
