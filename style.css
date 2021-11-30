@@ -12,3 +12,116 @@ html{
 body{
     background-color: #0D192B;
 }
+
+
+/*---------CARD---------*/
+.card-wrapper{
+    display : flex;
+    align-items: center;
+    justify-content : center;
+    padding: 22rem 0 10rem 0;
+
+}
+
+.card{
+    background-color: hsl(216, 50%, 16%);
+    display : flex;
+    align-items: center;
+    justify-content : center;
+    flex-direction : column;
+    width:30rem;
+    height:50rem;
+    border-radius : 3%;
+
+}
+
+.card-img{
+    width: 26rem;
+    height: 26rem;
+}
+
+.card-img img{
+    width:100%;
+    height:100%;
+    border-radius: 3%;
+}
+
+.text-info{
+    padding:2.5rem 2.5rem 1rem 2.5rem;
+}
+
+.name{
+    color: #fff;
+    font-size : 1.9rem;
+}
+
+.description {
+    color: hsl(215, 51%, 70%);
+    font-size: 1.6rem;
+    padding : 1.7rem 0 .5rem 0;
+    font-weight : 300;
+}
+
+.meta-info{
+    display : flex;
+    justify-content : center;
+    border-bottom: .1rem solid #2F415B;
+    align-items : flex-end;
+    padding : 1.7rem 0;
+    font-size : 1.5rem;
+    font-weight:bold;
+}
+
+.eth-data{
+    display : flex;
+    justify-content : center;
+    align-items: flex-end;
+
+}
+
+.eth-data p {
+    color : hsl(178, 100%, 50%);
+    margin-left : .6rem;
+}
+
+.time-data{
+    display : flex;
+    align-items : flex-end;
+    justify-content : center;
+    margin-left:auto;
+}
+
+.time-data p {
+    color:hsl(215, 51%, 70%);
+    margin-left : .6rem;
+}
+
+.user{
+    display: flex;
+    align-items : center;
+    margin-right: auto;
+    padding : 1.5rem 0 .7rem 0;
+}
+
+.user-img-wrapper{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right : 1.7rem;
+}
+
+.user-img-wrapper img {
+    width:100%;
+    height:100%;
+    border : .1rem solid #fff;
+    border-radius: 50%;
+}
+
+.user-text{
+    color: hsl(215, 51%, 70%);
+    font-size:1.4rem;
+}
+
+.user-text a {
+    text-decoration:none;
+    color: lightgray;
+}
