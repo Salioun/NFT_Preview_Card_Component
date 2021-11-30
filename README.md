@@ -5,7 +5,6 @@
 - [Overview](#overview)
     - [The challenge](#the-challenge)
     - [Screenshot](#screenshot)
-    - [Links](#links)
 - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
@@ -20,25 +19,18 @@
 
 ### The challenge
 
-Users should be able to:
-
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+The challenge was about creating a simple Preview card component using HTML and CSS
 
 ### Screenshot
 
 Desktop Mode
 
-![alt text](image/NFT Preview Card Component- Desktop.png.png)
+![alt text](https://github.com/Salioun/NFT_Preview_Card_Component/blob/main/images/NFT%20Preview%20Card%20Component-%20Desktop.png?raw=true)
 
 Mobile Mode
 
-![img_2.png](img_2.png)
+![alt text](https://github.com/Salioun/NFT_Preview_Card_Component/blob/main/images/NFT_Preview_Card_Component_Mobile.png?raw=true)
 
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -47,61 +39,63 @@ Mobile Mode
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Desktop-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+One of my main struggle with this project was the displaying of the eye icon while hovering over the card main image. I tried with the pseudo elements, but I didn't work.
+I finally used a ```div``` element in my ``` html``` in order to perform this trick. You can see my code below.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="card-img">
+    <div class="hover-image"></div>
+    <img src="images/image-equilibrium.jpg" alt="">
+</div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card-img{
+    width: 26rem;
+    height: 26rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-img img{
+    width:100%;
+    height:100%;
+    border-radius: 3%;
+
+}
+
+.card-img .hover-image{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 247, .7) url("images/icon-view.svg") no-repeat center;
+    opacity: 0;
+    z-index : 10;
+    transition : opacity 0.3s;
+    position : absolute;
+}
+
+.card-img:hover .hover-image{
+    opacity: .7;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I'll continue to focus on how implement css grid more efficiently. Because I think I'm not so used to this like I thought.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Flex-Box Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This helped me a lot in my understanding of Flex-boxes
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Salioun](https://www.frontendmentor.io/profile/Salioun)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Credit to Grace on Slack for helping me understand a little more the concept of pseudo-elements
